@@ -1,0 +1,55 @@
+<div class="bgComponent">
+    <div class="form">
+      <mat-card class="card">
+        <mat-card-title>Register user</mat-card-title>
+        <mat-card-content>
+          <div class="container">
+            <mat-form-field>
+              <input
+                [(ngModel)]="user.name"
+                matInput
+                placeholder="name"
+                required
+              />
+            </mat-form-field>
+
+            <mat-form-field>
+                <input
+                  [(ngModel)]="user.email"
+                  matInput
+                  placeholder="email"
+                  required
+                />
+            </mat-form-field>
+
+            <mat-form-field>
+                <input
+                  [(ngModel)]="user.password"
+                  type="password"
+                  matInput
+                  placeholder="password"
+                  required
+                />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Seleccione Rol</mat-label>
+                <mat-select [(ngModel)]="user.roleId">
+                    <mat-option *ngFor="let role of roles" [value]="role._id">
+                        {{role.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            
+          </div>
+        </mat-card-content>
+
+        <mat-card-actions>
+          <button (click)="save()" class="button" mat-raised-button>
+            Create
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  
