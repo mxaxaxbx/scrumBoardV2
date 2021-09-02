@@ -1,1 +1,37 @@
-<p>register-role works!</p>
+<div class="bgComponent">
+    <div class="form">
+        <mat-card class="card">
+            <mat-card-title>Register user</mat-card-title>
+            
+            <mat-card-content>
+                <div class="container">
+                    <mat-form-field>
+                    <input
+                        [(ngModel)]="role.name"
+                        matInput
+                        placeholder="name"
+                        required
+                    />
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <input
+                        [(ngModel)]="role.description"
+                        matInput
+                        placeholder="description"
+                        required
+                        />
+                    </mat-form-field>
+            
+                </div>
+            </mat-card-content>
+
+            <mat-card-actions>
+                <button (click)="save()" class="button" mat-raised-button>
+                    Create
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
+  

@@ -17,4 +17,8 @@ export class RoleService {
   getAll() {
     return this._http.get<any>(this.env + 'role/listRole');
   }
+
+  create(role:any) {
+    return this._http.post<any>(this.env + 'role/registerRole', role);
+  }
 }
